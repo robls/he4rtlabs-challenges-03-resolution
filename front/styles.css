@@ -1,0 +1,219 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html * {
+    font-family: 'Poppins';
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+span {
+    font-size: 14px;
+}
+
+h2 { 
+    font-size: 30px;
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, #FEFCFE 50%, #8D55C6 50%);
+}
+
+.dark-text {
+    color:#0E0E0E;
+}
+
+.light-text {
+    color: #FEFCFE;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: column;
+    padding: 40px 20px;
+    height: 200px;
+    width: 500px;
+}
+
+.dark-border {
+    border: 5px solid #0E0E0E;
+}
+
+.light-border {
+    border: 5px solid #FEFCFE;
+}
+
+.form-header {
+    margin-bottom: 20px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 8px;
+}
+
+*:focus {
+    outline: none;
+}
+
+form {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+}
+
+.new-account-form {
+    display: flex;
+}
+
+.login-form {
+    display: flex;
+}
+
+.display-none {
+    display: none;
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.visibility-visible {
+    visibility: visible;
+}
+
+.btn {
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px
+}
+
+.btn-login {
+    color: #FEFCFE;
+    background-color: #0e0e0e;
+    transition: .1s ease-in;
+}
+
+.btn-login:hover {
+    color: #0E0E0E;
+    background-color: #FEFCFE;
+    box-shadow: inset 0px 0px 0px 2px #0E0E0E;
+}
+
+.btn-new-account {
+    color: #8D55C6;
+    background-color: #FEFCFE;
+}
+
+.form-footer {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.error-span {
+    z-index: 999999;
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
+
+.clickabe-span {
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.purple-down {
+    -webkit-animation-name: purpleDown;
+    -webkit-transition: background-position .5s;
+    -moz-transition: background-position .5s;
+    transition: background-position .5s;
+    background-position: 0 -100%;
+}
+
+@-webkit-keyframes purpleDown {
+    from {
+        background-position: 0 100%;
+    }
+    to {
+        background-position: 0 -100%;
+    }
+}
+
+.white-up {
+    -webkit-animation-name: whiteUp;
+    -webkit-transition: background-position .5s;
+    -moz-transition: background-position .5s;
+    transition: background-position .5s;
+    background-position: 0 0%;
+}
+
+@-webkit-keyframes whiteUp {
+    from {
+        background-position: 0 -100%;
+    }
+    to {
+        background-position: 0 0%;
+    }
+}

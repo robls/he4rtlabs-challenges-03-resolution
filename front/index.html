@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="appContainer" class="container dark-text">
+            <div id="formContainer" class="form-container  dark-border">
+                <div class="form-header">
+                    <h2 id="title">Realizar Login</h2>
+                </div>
+                <form id="loginForm" class="form login-form">
+                    <span id="errorSpan" class="error-span visibility-hidden">Por favor insira um email valido !</span>
+                    <input placeholder="Digite o seu email..." type="email" id="loginEmail">
+                    <span id="passwordSpan" class="error-span visibility-hidden">A senha e obrigatoria !</span>
+                    <input placeholder="Digite a sua senha..." type="password" id="loginPassword">
+                </form>
+                <form id="newAccountForm" class="form new-account-form display-none">
+                    <span id="errorSpan" class="error-span visibility-hidden">Por favor insira um email valido !</span>
+                    <input placeholder="Digite o seu email..." type="email" id="newAccountEmail">
+                    <span id="passwordSpan" class="error-span visibility-hidden">A senha e obrigatoria !</span>
+                    <input placeholder="Digite a sua senha..." type="password" id="newAccountPassword">
+                </form>
+                <div class="form-footer">
+                    <span id="form-footer-sentence">
+                        Ainda não possui uma conta ? Clique 
+                        <span id="here-button" class="clickabe-span" onclick="formTransition()">aqui</span>
+                    </span>
+                    <button id="button" class="btn btn-login" onclick="buttonHandler()">Entrar</button>
+                </div>
+            </div>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
