@@ -10,9 +10,8 @@ async function insert(email, password){
     return await query(createUserQueryString);
 };
 
-async function login(email, password){
-    let loginQueryString = `SELECT USER_EMAIL FROM USERS WHERE USER_EMAIL = '${email}' AND USER_PASSWORD = '${password}'`;
-    console.log(loginQueryString);
+async function login(email){
+    let loginQueryString = `SELECT USER_PASSWORD FROM USERS WHERE USER_EMAIL = '${email}'`;
     return await query(loginQueryString);
 }
 
