@@ -33,7 +33,7 @@ const login = async (req, res) => {
     let { user_email, user_password } = req.body;
     try {
         let response = await UserBll.login(user_email, user_password);
-        return res.send(response);
+        return res.send({auth: true, token:response});
     } catch (error) {
         return res.status(403).send(error);
     }

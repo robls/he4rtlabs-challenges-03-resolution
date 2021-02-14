@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 const UserRepository = require('../infra/repositories/User');
+const authorization = require('../app/authorization');
 
 async function get(){
     return await UserRepository.get();
@@ -21,7 +22,7 @@ async function login(email, password){
     try {
         let rightPassword = await bcrypt.compare(password, storedPassword);
         if(rightPassword){
-            //authentication
+            return authorization(email);
         }else {
             throw("Not allowed");
         }
