@@ -16,7 +16,6 @@ const insert = async (req, res) => {
     
     if(!user_email || !user_email)
         return res.status(501).send({"Error": "Couldn't read user's information from the request, try again later"});
-
     try {
         let newUser = await UserBll.insert(user_email, user_password);
         return res.status(200).send(newUser);
@@ -34,9 +33,9 @@ const login = async (req, res) => {
     let { user_email, user_password } = req.body;
     try {
         let response = await UserBll.login(user_email, user_password);
-        return res.send(response);
+        return res.send({auth: true, token:response});
     } catch (error) {
-        console.error(error);
+        return res.status(403).send(error);
     }
 };
 
